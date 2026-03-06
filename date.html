@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sidharth, You Have a Surprise 💌</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#1a1a2e,#16213e);
+  color:white;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.card {
+  background:rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  max-width:450px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+h1 {
+  color:#ffd369;
+}
+
+button {
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  margin:10px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.reveal {
+  background:#ffd369;
+  color:black;
+}
+
+.yes {
+  background:#ff4d6d;
+  color:white;
+}
+
+.no {
+  background:#aaa;
+  position:absolute;
+}
+
+button:hover {
+  transform:scale(1.1);
+}
+
+.ticket {
+  display:none;
+  margin-top:20px;
+  font-size:16px;
+  line-height:1.6;
+  color:#ffd369;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Baba… 🥺💖</h1>
+
+  <p>
+    I wanted to ask you something special…  
+    I know that there are only a few days left for us but I want to experience                   something beautiful,Something magical ✨
+  </p>
+
+  <button class="reveal" onclick="showTicket()">
+    Open Your Surprise 🎁
+  </button>
+
+  <div class="ticket" id="ticket">
+    <p><b>Candlelight Open Air: Mehfil-e-Sufi 🎶</b></p>
+    <p>📍 Purana Quila, New Delhi</p>
+    <p>🗓 Sat 14 March – 7:00 PM</p>
+    <p>Zone B ✨</p>
+
+    <p style="margin-top:15px;">
+      Will you be my date for this beautiful night under the stars? 🌙✨
+    </p>
+
+    <button class="yes" onclick="accepted()">Yes, always ❤️</button>
+    <button class="no" onmouseover="moveButton(this)">No 🙈</button>
+
+    <p id="response" style="display:none; margin-top:15px; color:#ff4d6d; font-weight:bold;">
+      I can’t wait to experience this with you 💞  
+      It’s going to be magical ✨
+    </p>
+  </div>
+</div>
+
+<script>
+function showTicket(){
+  document.getElementById("ticket").style.display="block";
+}
+
+function accepted(){
+  document.getElementById("response").style.display="block";
+}
+
+function moveButton(btn){
+  btn.style.top=Math.random()*300+"px";
+  btn.style.left=Math.random()*300+"px";
+}
+</script>
+
+</body>
+</html>
